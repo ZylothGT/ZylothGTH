@@ -454,3 +454,31 @@ footer {
         padding: 80px 20px;
     }
 }
+
+.music-controls {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.music-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #8000ff;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(128, 0, 255, 0.4);
+}
+
+.volume-slider {
+    width: 100px;
+    accent-color: #8000ff;
+    cursor: pointer;
+}

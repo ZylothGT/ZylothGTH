@@ -156,6 +156,20 @@
         <p>Made with 🦍</p>
     </footer>
 
+    <audio id="backgroundMusic" loop>
+        <source src="Resources/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="music-controls">
+        <button id="musicToggle" class="music-button">🔊</button>
+
+        <input type="range"
+               id="volumeSlider"
+               min="0"
+               max="100"
+               value="100"
+               class="volume-slider">
+    </div>
 
     <script src="script.js"></script>
 
