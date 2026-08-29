@@ -93,18 +93,19 @@ visualizerLoop();
 
 async function playMusic() {
     try {
-        await music.play();
-        musicToggle.textContent = "🔊";
-
         setupAudioAnalyser();
 
         if (audioContext.state === "suspended") {
             await audioContext.resume();
         }
 
+        await music.play();
+
+        musicToggle.textContent = "🔊";
+
         return true;
     } catch (error) {
-        console.log("Autoplay blocked:", error);
+        console.error("Music failed to play:", error);
         return false;
     }
 }
