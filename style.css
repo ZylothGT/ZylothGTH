@@ -28,15 +28,32 @@ body {
     position: relative;
 }
 
-    /* Background */
+    /* =========================
+   MUSIC REACTIVE BACKGROUND
+========================= */
+
     body::before {
         content: "";
         position: fixed;
-        inset: -30px;
+        /*
+       Make the background bigger than
+       the screen so shaking doesn't
+       reveal empty edges.
+    */
+        inset: -40px;
         background: url("Resources/background.png") center / cover no-repeat;
         filter: blur(6px);
         z-index: -1;
+        /*
+       Values are controlled by JavaScript.
+    */
+        transform: translate( var(--bg-x, 0px), var(--bg-y, 0px) ) rotate( var(--bg-rotation, 0deg) ) scale( var(--bg-scale, 1) );
+        transform-origin: center center;
+        will-change: transform;
+        pointer-events: none;
     }
+
+
 
 
 /* =========================
